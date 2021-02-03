@@ -1,11 +1,11 @@
-# tower_sys_2020
+# 微信答题小程序后端
 
 ### 一、代码托管
 
-> [Github](https://github.com/KAIAOS/TowerSysApi2020)
+> [Github](https://github.com/KAIAOS/mp_quiz)
 
 ```bash
-git clone https://github.com/KAIAOS/TowerSysApi2020.git
+git clone https://github.com/KAIAOS/mp_quiz
 ```
 
 ### 二、 打包并部署
