@@ -36,7 +36,7 @@ public class Swagger2Config {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("微信答题小程序")
-                .contact(new Contact("TowerSystem","https://github.com/KAIAOS/mp_quiz","1197617594@qq.com"))
+                .contact(new Contact("MpQuiz","https://github.com/KAIAOS/mp_quiz","1197617594@qq.com"))
                 .description("微信答题小程序后台接口文档")
                 .license("Apache License Version 2.0")
                 .licenseUrl("https://github.com/springfox/springfox/blob/master/LICENSE")
