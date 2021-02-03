@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+    user: root
+    password: hanKAI1998.
+    jdbcUrl: jdbc:mysql://localhost:3306/mp_quiz?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+    driverClass: com.mysql.cj.jdbc.Driver
+    maxPoolSize: 2000
+    minPoolSize: 3
+    initialPoolSize: 3
+
+#打印sql
+logging:
+  level:
+    com.wst.mp_quiz.dao: DEBUG
+
+server:
+  servlet:
+    context-path: /api
+  port: 8084
+
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml

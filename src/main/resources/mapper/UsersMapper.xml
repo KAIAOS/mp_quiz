@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wst.mp_quiz.dao.UsersMapper">
+
+    <select id="findByWxId" resultType="com.wst.mp_quiz.entity.Users">
+        select *
+        from users
+        where
+        wx_id = #{wx_id}
+        LIMIT 1
+    </select>
+
+</mapper>
