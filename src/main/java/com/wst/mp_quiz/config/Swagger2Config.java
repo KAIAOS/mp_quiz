@@ -24,7 +24,7 @@ public class Swagger2Config {
      */
     @Bean
     public Docket createRestApi() {
-
+        //testgit git add test.txt
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select()
                 .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
                 .paths(PathSelectors.any()).build();
