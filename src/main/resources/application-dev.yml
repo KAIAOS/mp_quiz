@@ -2,7 +2,7 @@ spring:
   datasource:
     type: com.mchange.v2.c3p0.ComboPooledDataSource
     user: root
-    password: hanKAI1998.
+    password: 123456
     jdbcUrl: jdbc:mysql://localhost:3306/mp_quiz?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
     driverClass: com.mysql.cj.jdbc.Driver
     maxPoolSize: 2000
