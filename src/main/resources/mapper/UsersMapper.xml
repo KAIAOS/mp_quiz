@@ -12,4 +12,19 @@
         LIMIT 1
     </select>
 
+    <insert id="insert">
+        insert into
+        users
+		(wx_id,student_id,name,class_name)
+        values
+		(#{openId},#{studentId},#{name},#{className})
+    </insert>
+
+    <update id="update">
+        update users
+        set
+		student_id=#{studentId},name=#{name},class_name=#{className}
+        where
+        id = #{number}
+    </update>
 </mapper>

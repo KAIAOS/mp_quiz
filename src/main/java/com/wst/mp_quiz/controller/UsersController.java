@@ -1,13 +1,14 @@
 package com.wst.mp_quiz.controller;
 
-
 import com.wst.mp_quiz.entity.Users;
+import com.wst.mp_quiz.pojo.Student;
 import com.wst.mp_quiz.service.UsersService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.HashMap;
@@ -36,4 +37,16 @@ public class UsersController {
         }
         return result;
     }
+
+    @ApiOperation(value = "根据wxid注册用户信息", notes = "若存在则更新")
+    @PostMapping("/users")
+    @ResponseBody
+    public Map<String, Object> saveUsers(Student student){
+        Map<String, Object> result = new HashMap<>();
+        userService.registerOrUpdate(student);
+        result.put("status", 200);
+        result.put("msg", "用户信息更新成功");
+        return result;
+    }
+
 }
