@@ -6,6 +6,15 @@ public class Users {
     String student_id;
     String name;
     String class_name;
+    Integer number;
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    public void setNumber(Integer number) {
+        this.number = number;
+    }
 
     public Integer getId() {
         return id;
