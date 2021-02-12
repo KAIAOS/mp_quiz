@@ -4,6 +4,14 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wst.mp_quiz.dao.AnswerRecordMapper">
 
+    <select id="updateAnswer" parameterType="com.wst.mp_quiz.pojo.AnswerRecordVo">
+        INSERT INTO
+        answer_record(unique_index,wx_id,group_id,question_id,answer)
+        VALUES(#{unique_index},#{wx_id},#{group_id},#{question_id},#{answer})
+        on DUPLICATE key UPDATE
+        wx_id=#{wx_id},group_id=#{group_id},question_id=#{question_id},answer=#{answer}
+    </select>
+
     <select id="byWxIdAndQid" resultType="com.wst.mp_quiz.entity.AnswerRecord">
         select *
         from answer_record

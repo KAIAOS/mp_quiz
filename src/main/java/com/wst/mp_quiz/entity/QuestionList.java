@@ -1,6 +1,8 @@
 package com.wst.mp_quiz.entity;
 
-public class QuestionList {
+import com.wst.mp_quiz.pojo.QuestionListVo;
+
+public class QuestionList extends QuestionListVo {
     Integer id;
     Integer group_id;
     String question_title;
