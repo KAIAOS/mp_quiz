@@ -10,6 +10,9 @@ import java.util.List;
 @Component(value = "QuestionListMapper")
 public interface QuestionListMapper {
 
+    List<QuestionList> getListChoose(Integer group_id);
+
     List<QuestionList> getList(Integer group_id);
 
+    List<QuestionList> getListSpeak(Integer group_id);
 }

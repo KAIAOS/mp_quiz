@@ -44,9 +44,13 @@ public class QuestionListController {
     @GetMapping("/questionList/detail")
     @ResponseBody
     public R test(Integer group_id){
-        List<QuestionList> list = questionListMapper.getList(group_id);
-        List<QuestionListVo> result =questionListService.getOption(list);
-        return R.ok().data("list",result);
+        List<QuestionList> listChoose = questionListMapper.getListChoose(group_id);
+        List<QuestionList> listSpeak = questionListMapper.getListSpeak(group_id);
+        List<QuestionListVo> resultChoose =questionListService.getOption(listChoose);
+        if (resultChoose==null||resultChoose.size()==0){
+            return R.error();
+        }
+        return R.ok().data("list",resultChoose);
     }
 
     @ApiOperation(value = "提交选择题答案数组", notes = "提交选择题答案数组")

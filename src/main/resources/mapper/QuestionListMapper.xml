@@ -4,11 +4,22 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wst.mp_quiz.dao.QuestionListMapper">
 
+    <select id="getListChoose" resultType="com.wst.mp_quiz.entity.QuestionList">
+        select *
+        from question_list
+        where group_id = #{group_id} and question_type=1
+    </select>
+
+    <select id="getListSpeak" resultType="com.wst.mp_quiz.entity.QuestionList">
+        select *
+        from question_list
+        where group_id = #{group_id} and question_type=1
+    </select>
+
     <select id="getList" resultType="com.wst.mp_quiz.entity.QuestionList">
         select *
         from question_list
-        where group_id = #{group_id}
+        where group_id = #{group_id} and question_type=1
     </select>
-
 
 </mapper>
